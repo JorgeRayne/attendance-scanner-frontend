@@ -1,7 +1,9 @@
-import { IpcHandler } from '../main/preload'
+import { IpcHandler } from "../main/preload";
 
 declare global {
   interface Window {
-    ipc: IpcHandler
+    timeInterval?: NodeJS.Timeout; // Make the type optional since it may not exist at all times.
   }
 }
+
+export {};
